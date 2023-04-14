@@ -25,3 +25,12 @@ model BookOfBusiness {
   name        String?
   updatedAt   DateTime @updatedAt
 }
+
+model Employee {
+  createdAt  DateTime   @default(now())
+  employee   Employee?  @relation(name: "EmployeeOnEmployees", fields: [employeeId], references: [id])
+  employeeId String?
+  employees  Employee[] @relation(name: "EmployeeOnEmployees")
+  id         String     @id @default(cuid())
+  updatedAt  DateTime   @updatedAt
+}

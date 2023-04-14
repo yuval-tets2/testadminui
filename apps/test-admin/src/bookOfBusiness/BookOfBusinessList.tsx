@@ -12,7 +12,7 @@ export const BookOfBusinessList = (props: ListProps): React.ReactElement => {
       pagination={<Pagination />}
     >
       <Datagrid rowClick="show">
-        <DateField source="createdAt" label="Created At" />
+        <DateField source="created" label="Created At" />
         <TextField label="description" source="description" />
         <TextField label="ID" source="id" />
         <TextField label="name" source="name" />

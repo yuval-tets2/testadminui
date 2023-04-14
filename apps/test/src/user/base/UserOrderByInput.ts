@@ -25,7 +25,7 @@ class UserOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  createdAt?: SortOrder;
+  created?: SortOrder;
 
   @ApiProperty({
     required: false,
@@ -79,7 +79,7 @@ class UserOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  updatedAt?: SortOrder;
+  updated?: SortOrder;
 
   @ApiProperty({
     required: false,

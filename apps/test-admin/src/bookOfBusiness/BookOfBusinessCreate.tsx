@@ -1,5 +1,11 @@
 import * as React from "react";
-import { Create, SimpleForm, CreateProps, TextInput } from "react-admin";
+import {
+  Create,
+  SimpleForm,
+  CreateProps,
+  DateTimeInput,
+  TextInput,
+} from "react-admin";
 
 export const BookOfBusinessCreate = (
   props: CreateProps
@@ -7,6 +13,7 @@ export const BookOfBusinessCreate = (
   return (
     <Create {...props}>
       <SimpleForm>
+        <DateTimeInput label="Created At" source="created" disabled />
         <TextInput label="description" multiline source="description" />
         <TextInput label="name" source="name" />
       </SimpleForm>

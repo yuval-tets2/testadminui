@@ -8,20 +8,29 @@ generator client {
 }
 
 model User {
-  createdAt DateTime @default(now())
+  created   DateTime @default(now())
   firstName String?
   id        String   @id @default(cuid())
   lastName  String?
   password  String
   roles     Json
-  updatedAt DateTime @updatedAt
+  updated   DateTime @updatedAt
   username  String   @unique
 }
 
 model BookOfBusiness {
-  createdAt   DateTime @default(now())
+  created     DateTime @default(now())
   description String?
   id          String   @id @default(cuid())
   name        String?
   updatedAt   DateTime @updatedAt
+}
+
+model Employee {
+  createdAt  DateTime   @default(now())
+  employee   Employee?  @relation(name: "EmployeeOnEmployees", fields: [employeeId], references: [id])
+  employeeId String?
+  employees  Employee[] @relation(name: "EmployeeOnEmployees")
+  id         String     @id @default(cuid())
+  updatedAt  DateTime   @updatedAt
 }

@@ -22,7 +22,7 @@ class BookOfBusiness {
   @IsDate()
   @Type(() => Date)
   @Field(() => Date)
-  createdAt!: Date;
+  created!: Date;
 
   @ApiProperty({
     required: false,

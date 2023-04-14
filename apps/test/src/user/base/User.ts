@@ -24,7 +24,7 @@ class User {
   @IsDate()
   @Type(() => Date)
   @Field(() => Date)
-  createdAt!: Date;
+  created!: Date;
 
   @ApiProperty({
     required: false,
@@ -69,7 +69,7 @@ class User {
   @IsDate()
   @Type(() => Date)
   @Field(() => Date)
-  updatedAt!: Date;
+  updated!: Date;
 
   @ApiProperty({
     required: true,

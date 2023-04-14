@@ -1,7 +1,7 @@
 import { SortOrder } from "../../util/SortOrder";
 
 export type BookOfBusinessOrderByInput = {
-  createdAt?: SortOrder;
+  created?: SortOrder;
   description?: SortOrder;
   id?: SortOrder;
   name?: SortOrder;

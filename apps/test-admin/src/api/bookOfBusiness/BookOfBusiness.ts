@@ -1,5 +1,5 @@
 export type BookOfBusiness = {
-  createdAt: Date;
+  created: Date;
   description: string | null;
   id: string;
   name: string | null;

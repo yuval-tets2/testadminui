@@ -19,14 +19,14 @@ import { BookOfBusinessService } from "../bookOfBusiness.service";
 const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
-  createdAt: new Date(),
+  created: new Date(),
   description: "exampleDescription",
   id: "exampleId",
   name: "exampleName",
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
-  createdAt: new Date(),
+  created: new Date(),
   description: "exampleDescription",
   id: "exampleId",
   name: "exampleName",
@@ -34,7 +34,7 @@ const CREATE_RESULT = {
 };
 const FIND_MANY_RESULT = [
   {
-    createdAt: new Date(),
+    created: new Date(),
     description: "exampleDescription",
     id: "exampleId",
     name: "exampleName",
@@ -42,7 +42,7 @@ const FIND_MANY_RESULT = [
   },
 ];
 const FIND_ONE_RESULT = {
-  createdAt: new Date(),
+  created: new Date(),
   description: "exampleDescription",
   id: "exampleId",
   name: "exampleName",
@@ -131,7 +131,7 @@ describe("BookOfBusiness", () => {
       .expect(HttpStatus.CREATED)
       .expect({
         ...CREATE_RESULT,
-        createdAt: CREATE_RESULT.createdAt.toISOString(),
+        created: CREATE_RESULT.created.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       });
   });
@@ -143,7 +143,7 @@ describe("BookOfBusiness", () => {
       .expect([
         {
           ...FIND_MANY_RESULT[0],
-          createdAt: FIND_MANY_RESULT[0].createdAt.toISOString(),
+          created: FIND_MANY_RESULT[0].created.toISOString(),
           updatedAt: FIND_MANY_RESULT[0].updatedAt.toISOString(),
         },
       ]);
@@ -166,7 +166,7 @@ describe("BookOfBusiness", () => {
       .expect(HttpStatus.OK)
       .expect({
         ...FIND_ONE_RESULT,
-        createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
+        created: FIND_ONE_RESULT.created.toISOString(),
         updatedAt: FIND_ONE_RESULT.updatedAt.toISOString(),
       });
   });
@@ -179,7 +179,7 @@ describe("BookOfBusiness", () => {
       .expect(HttpStatus.CREATED)
       .expect({
         ...CREATE_RESULT,
-        createdAt: CREATE_RESULT.createdAt.toISOString(),
+        created: CREATE_RESULT.created.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       })
       .then(function () {

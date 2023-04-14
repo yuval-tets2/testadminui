@@ -13,6 +13,10 @@ import { BookOfBusinessList } from "./bookOfBusiness/BookOfBusinessList";
 import { BookOfBusinessCreate } from "./bookOfBusiness/BookOfBusinessCreate";
 import { BookOfBusinessEdit } from "./bookOfBusiness/BookOfBusinessEdit";
 import { BookOfBusinessShow } from "./bookOfBusiness/BookOfBusinessShow";
+import { EmployeeList } from "./employee/EmployeeList";
+import { EmployeeCreate } from "./employee/EmployeeCreate";
+import { EmployeeEdit } from "./employee/EmployeeEdit";
+import { EmployeeShow } from "./employee/EmployeeShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -52,6 +56,13 @@ const App = (): React.ReactElement => {
           edit={BookOfBusinessEdit}
           create={BookOfBusinessCreate}
           show={BookOfBusinessShow}
+        />
+        <Resource
+          name="Employee"
+          list={EmployeeList}
+          edit={EmployeeEdit}
+          create={EmployeeCreate}
+          show={EmployeeShow}
         />
       </Admin>
     </div>

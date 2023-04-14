@@ -52,7 +52,7 @@ export class BookOfBusinessControllerBase {
     return await this.service.create({
       data: data,
       select: {
-        createdAt: true,
+        created: true,
         description: true,
         id: true,
         name: true,
@@ -78,7 +78,7 @@ export class BookOfBusinessControllerBase {
     return this.service.findMany({
       ...args,
       select: {
-        createdAt: true,
+        created: true,
         description: true,
         id: true,
         name: true,
@@ -105,7 +105,7 @@ export class BookOfBusinessControllerBase {
     const result = await this.service.findOne({
       where: params,
       select: {
-        createdAt: true,
+        created: true,
         description: true,
         id: true,
         name: true,
@@ -141,7 +141,7 @@ export class BookOfBusinessControllerBase {
         where: params,
         data: data,
         select: {
-          createdAt: true,
+          created: true,
           description: true,
           id: true,
           name: true,
@@ -176,7 +176,7 @@ export class BookOfBusinessControllerBase {
       return await this.service.delete({
         where: params,
         select: {
-          createdAt: true,
+          created: true,
           description: true,
           id: true,
           name: true,

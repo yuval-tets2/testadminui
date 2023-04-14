@@ -25,7 +25,7 @@ class BookOfBusinessOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  createdAt?: SortOrder;
+  created?: SortOrder;
 
   @ApiProperty({
     required: false,
